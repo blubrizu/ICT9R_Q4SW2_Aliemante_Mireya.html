@@ -1,0 +1,52 @@
+<html> 
+<head>
+    <title>Calculator</title>
+
+    <style>
+    	background {
+    		background-color: blue;
+
+    	}
+    </style>
+</head>
+<body>
+    <form>
+        x: <input type="text" id="num1">
+        y: <input type="text" id="num2">
+        <button type="button" onclick="prod()">Product of x and y</button>
+        <button type="button" onclick="sqr()">Square of x and y</button>
+        <button type="button" onclick="rem()">Remainder of x and y</button>
+        <button type="button" onclick="eq()">Check if x is equal to y</button>
+    </form>
+    
+    <script>
+        function prod() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var prod = Number(num1) * Number(num2);
+            window.alert("The product is: " + prod);
+        }
+
+        function sqr() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var sqr = Math.pow(Number(num1), Number(num2));
+            window.alert("The square is: " + sqr);
+        }
+
+        function rem() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var rem = Number(num1) % Number(num2);
+            window.alert("The remainder is: " + rem);
+        }
+
+        function eq() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var eq = Number(num1) == Number(num2);
+            window.alert("Is x equal to y? " + eq);
+        }
+    </script>
+</body>
+</html>
